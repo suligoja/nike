@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
 <link rel="icon" type="image/png" href="slike/nike.jpg">
 	<style>
-	body {font-family: "Times New Roman", Georgia, Serif;}
+	body {
+	font-family: "Times New Roman", Georgia, Serif; background-color:#E0E0E0
+	}
 	h1, h2, h3, h4, h5, h6 {
 	  font-family: "Playfair Display";
 	  letter-spacing: 5px;
@@ -18,19 +20,31 @@
 	.jpg{
 	margin-left:0px;
 	}
+	#sredina{
+	background-color: white;
+	box-shadow: 10px 10px 5px black;
+	border-radius: 15px;
+	margin-bottom:8px;
+	}
+	#nikesvg{
+	color:black;
+	}
+	#naslov{
+	text-align:center;
+	color:black;
+	}
 	</style>
 </head>
 <body>
-
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">Nike</a>
+    <a href="#home" class="w3-bar-item w3-button"><img src="slike/Nike-logo.png"  width="50" height="30"></a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">SVG</a>
+      <a href="#about" class="w3-bar-item w3-button">JPG</a>
       <a href="#menu" class="w3-bar-item w3-button">Beizer</a>
-      <a href="#contact" class="w3-bar-item w3-button">JPG</a>
+      <a href="#contact" class="w3-bar-item w3-button">SVG</a>
     </div>
   </div>
 </div>
@@ -39,13 +53,15 @@
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
   <img class="logo_header" src="slike/Nike-logo.png"  width="1200" height="700">
   <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Nike spletna stran</h1>
+
   </div>
 </header>
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
 
+<div class="w3-content" id="sredina"" style="max-width:1100px">
+
+<h1 class="w3-xxlarge" id="naslov"><b>Nike spletna stran</b></h1>
   <!-- About Section -->
   <div class="w3-row w3-padding-64" id="about">
     <div class="w3-col m6 w3-padding-large w3-hide-small">
@@ -60,12 +76,7 @@
 	  športne opreme s prihodki, ki presegajo 46 milijard ameriških dolarjev v njegovem proračunskem letu 2022.	  
 Podjetje sta 25. januarja 1964 kot "Blue Ribbon Sports" ustanovila Bill Bowerman in Phil Knight,
  uradno pa je postalo Nike, Inc. 30. maja 1971. Podjetje je dobilo ime po Nike, grški boginji zmage.</p>
-      <p class="w3-large w3-text-grey w3-hide-medium">Nike trži svoje izdelke pod lastno blagovno znamko, kot tudi Nike Golf, Nike Pro, Nike+, Nike Blazers,
- Air Force 1, Nike Dunk, Air Max, Foamposite, Nike Skateboarding, Nike CR7 in hčerinske družbe, vključno
- z Air Jordan in Converse (blagovna znamka ). Nike je imel v lasti tudi Bauer Hockey od leta 1995 do 2008,
- pred tem pa Cole Haan, Umbro in Hurley International. Poleg proizvodnje športnih oblačil in opreme podjetje
- upravlja maloprodajne trgovine pod imenom Niketown. Nike sponzorira številne odmevne športnike in športne ekipe
- po vsem svetu z zelo priznanimi blagovnimi znamkami "Just Do It" in logotipom Swoosh.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">Slika jpg</p>
     </div>
   </div>
   
@@ -76,25 +87,36 @@ Podjetje sta 25. januarja 1964 kot "Blue Ribbon Sports" ustanovila Bill Bowerman
     <div class="w3-col l6 w3-padding-large">
       <h1 class="w3-center">Beizer curve</h1><br>
       <h4 class="w3-center">Beizer</h4>
-      <p class="w3-large"> Pri risanju sem uporabil funkcijo bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)</p>     
+      <p class="w3-large">Nike trži svoje izdelke pod lastno blagovno znamko, kot tudi Nike Golf, Nike Pro, Nike+, Nike Blazers,
+ Air Force 1, Nike Dunk, Air Max, Foamposite, Nike Skateboarding, Nike CR7 in hčerinske družbe, vključno
+ z Air Jordan in Converse (blagovna znamka ). Nike je imel v lasti tudi Bauer Hockey od leta 1995 do 2008,
+ pred tem pa Cole Haan, Umbro in Hurley International. Poleg proizvodnje športnih oblačil in opreme podjetje
+ upravlja maloprodajne trgovine pod imenom Niketown. Nike sponzorira številne odmevne športnike in športne ekipe
+ po vsem svetu z zelo priznanimi blagovnimi znamkami "Just Do It" in logotipom Swoosh.</p>     
+<p class="w3-large w3-text-grey w3-hide-medium">Pri risanju sem uporabil funkcijo bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)</p>
     </div>
     
     <div class="w3-col l6 w3-padding-large">
-      <canvas id="myCanvas" width="650" height="400"></canvas>
-    <script>
-      var canvas = document.getElementById('myCanvas');
-      var context = canvas.getContext('2d');
-var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.beginPath();
-	ctx.moveTo(98, 44);
-	ctx.bezierCurveTo(25, 225, 260, 155, 630, 50);
-	ctx.bezierCurveTo(480, 100, -186, 432, 84, 64);
-	ctx.closePath();
-	ctx.fillStyle = "#000000";
-	ctx.fill();
-	ctx.stroke();
-    </script>
+      <canvas id="myCanvas" width="490" height="200"
+          style="border: 1px solid rgb(255, 255, 255); margin-top: 8%;"></canvas>
+        <script>
+          var canvas = document.getElementById('myCanvas');
+          var context = canvas.getContext('2d');
+          x = 0.4;
+          y = 0.4;
+          context.beginPath();
+          context.scale(x, y);
+          context.moveTo(177, -3);
+          context.bezierCurveTo(-128, 298, -2, 520, 309, 388);
+          context.bezierCurveTo(309, 388, 1197, 8, 1197, 8);
+          context.bezierCurveTo(1197, 8, 311, 244, 311, 244);
+          context.bezierCurveTo(60, 289, 128, 70, 177, -3);
+          context.lineWidth = 2;
+
+          context.strokeStyle = 'black';
+          context.fill();
+          context.stroke();
+        </script>
     </div>
   </div>
 
@@ -104,9 +126,9 @@ var c = document.getElementById("myCanvas");
   <div class="w3-row w3-padding-64" id="contact">
     <div class="w3-col m6 w3-padding-large ">
 	<svg xmlns="http://www.w3.org/2000/svg"
-    width="600" height="750"
-     viewBox="0 0 1198 980" class="w3-round w3-image w3-opacity-min">
-  <path id="Neimenovano #6"
+    width="560" height="520"
+     viewBox="0 0 1198 980">
+  <path id="nikesvg"
         fill="black" stroke="black" stroke-width="1"
         d="M 312.36,681.27
            C 275.03,696.61 208.00,694.67 204.67,694.00
@@ -120,17 +142,20 @@ var c = document.getElementById("myCanvas");
     <div class="w3-col m6 w3-padding-large">
       <h1 class="w3-center">SVG</h1><br>
       <h5 class="w3-center">Orodje Gimp</h5>
-      <p class="w3-large"> Pri risanju naj vam bo v pomoč programsko orodje Gimp.</p>
-      <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="w3-large"> V povzetku, Nike ni le športno podjetje; gre za globalni kulturni fenomen,
+	  ki je presegel svoje korenine v športu. Z združitvijo najnovejše tehnologije, strateških partnerstev
+	  in zavezanosti družbeni odgovornosti še naprej ostaja vodilna sila v svetu športa in mode.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">Pri risanju sem uporabim programsko orodje Gimp.</p>
     </div>
   </div>
   
 <!-- End page content -->
 </div>
 
+
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Powered by <a href="https://www.nike.com/si/" title="nike" target="_blank" class="w3-hover-text-green">Nike.si</a></p>
 </footer>
 
 </body>
